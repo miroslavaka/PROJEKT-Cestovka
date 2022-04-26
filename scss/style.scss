@@ -8,31 +8,36 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  /*text-align: center;*/
+  padding: 0 20px;
 }
 .header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
   @media screen and (min-width: 480px) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   &__title {
     color: $primary-color;
     text-transform: uppercase;
     margin: 36px 0 50px 0;
+
+    @media screen and (min-width: 480px) {
+      margin: 56px 0;
+    }
   }
 }
 .tabs {
   &__items {
     padding-left: 0;
     margin: 0;
-
-    @media screen and (min-width: 480px) {
-      margin: 36px 0 50px 0;
-    }
   }
   &__item {
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 5px 50px 5px;
   }
   &__link {
     color: $primary-color;
@@ -44,14 +49,7 @@ body {
     padding: 20px;
   }
 }
-
-.main {
-  padding: 0 20px;
-}
-.hero,
-.services,
-.lastminute,
-.news {
+.hero {
   @media screen and (min-width: 480px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,71 +57,57 @@ body {
   }
   @media screen and (min-width: 780px) {
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(7, 1fr);*/
   }
-}
-
-.hero {
-  &__image {
-    /*  overflow: hidden; */
+  &__trip {
+    position: relative;
+    color: #fff;
   }
-  &__image img {
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    /*  overflow: hidden; */
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
   }
-  &__text {
-    /* color: $white;
-    transform: translateY(100%); */
+  &__info {
+    padding-left: 10px;
+    & h2 {
+      font-size: 18px;
+      padding-bottom: 23px;
+    }
   }
-  &__text h1 {
-    margin: 0;
+  &__description {
+    font-family: $font-secondary;
+    font-size: 16px;
+    padding-bottom: 21px;
   }
-  &__text h2 {
-    margin: 0;
-    font-size: 18px;
-  }
-  &__text p {
-    margin: 0;
-  }
-  &--price {
+  &__price {
     display: inline-block;
     background-color: $primary-color;
-    width: 100px;
     padding: 10px;
-    margin: 0;
   }
   &--main {
-    @media (min-width: 480px) {
+    @media screen and (min-width: 480px) {
       grid-column: 1/-1;
     }
-    @media (min-width: 780px) {
+    @media screen and (min-width: 780px) {
       grid-column: 1/3;
       grid-row: 1/3;
     }
   }
-  &--right {
-    @media screen and (min-width: 480px) {
-      grid-column: 1/2;
-    }
-    @media (min-width: 780px) {
-      grid-column: 3/4;
-      grid-row: 1/2;
-    }
-  }
-  &--left {
-    @media screen and (min-width: 480px) {
-      grid-column: 2/3;
-    }
-    @media screen and (min-width: 780px) {
-      grid-column: 3/4;
-      grid-row: 2/3;
-    }
-  }
 }
 .services {
-  @media (min-width: 780px) {
-    grid-row: 3/4;
+  @media screen and (min-width: 480px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
+  @media screen and (min-width: 780px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   &__box {
     display: flex;
     background-color: $gray-light;
@@ -138,73 +122,69 @@ body {
 }
 
 .lastminute {
-  &__image {
-    /* overflow: hidden; */
+  &__trips {
+    @media screen and (min-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media screen and (min-width: 780px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-  &__image img {
+  &__trip {
+    // background-color: lightgray;
+    position: relative;
+    color: #fff;
+  }
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    /*  overflow: hidden; */
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    // display: none;
   }
-  &__text {
-    /*   color: $white;
-    transform: translateY(100%); */
+  &__info {
+    padding-left: 10px;
+    & h2 {
+      font-size: 18px;
+      padding-bottom: 23px;
+    }
   }
-  &__text h1 {
-    margin: 0;
+  &__description {
+    font-family: $font-secondary;
+    font-size: 16px;
+    padding-bottom: 21px;
   }
-  &__text h2 {
-    margin: 0;
-    font-size: 18px;
-  }
-  &--price {
+  &__price {
     display: inline-block;
     background-color: $primary-color;
-    width: 100px;
     padding: 10px;
-    margin: 0;
   }
   &--main {
     @media screen and (min-width: 480px) {
       grid-column: 1/-1;
     }
-    @media (min-width: 780px) {
+    @media screen and (min-width: 780px) {
       grid-column: 1/3;
       grid-row: 1/3;
-    }
-  }
-  &--right {
-    @media screen and (min-width: 480px) {
-      grid-column: 1/2;
-    }
-    @media (min-width: 780px) {
-      grid-column: 3/4;
-      grid-row: 1/2;
-    }
-  }
-  &--left {
-    @media screen and (min-width: 480px) {
-      grid-column: 2/3;
-    }
-    @media screen and (min-width: 780px) {
-      grid-column: 3/4;
-      grid-row: 2/3;
     }
   }
 }
 
 .news {
-  &__titlemain {
-    grid-column: 1/-1;
+  &__all {
+    @media screen and (min-width: 780px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
   }
   &__box {
     background-color: #f0f0f0;
-    @media screen and (min-width: 480px) {
-      grid-column: 1/-1;
-    }
-    @media screen and (min-width: 480px) {
-      grid-column: 1/-1;
-      grid-row: 1/2;
-    }
   }
   &__title {
     color: $primary-color;
@@ -212,7 +192,6 @@ body {
 }
 
 .footer {
-  padding: 20px;
   &__content {
     background-color: $gray-dark;
     color: $white;
