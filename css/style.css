@@ -16,7 +16,6 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  /*text-align: center;*/
   padding: 0 20px;
 }
 
@@ -32,7 +31,6 @@ body {
   }
 }
 .header__title {
-  color: #f03000;
   text-transform: uppercase;
   margin: 36px 0 50px 0;
 }
@@ -40,6 +38,10 @@ body {
   .header__title {
     margin: 56px 0;
   }
+}
+.header__title a {
+  color: #f03000;
+  text-decoration: none;
 }
 
 .tabs__items {
@@ -222,12 +224,6 @@ body {
   width: 100%;
 }
 
-/* .main {
-  @media screen and (min-width: 780px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
 @media screen and (min-width: 780px) {
   .azure-moon {
     display: grid;

@@ -8,7 +8,6 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  /*text-align: center;*/
   padding: 0 20px;
 }
 .header {
@@ -21,12 +20,15 @@ body {
     justify-content: space-between;
   }
   &__title {
-    color: $primary-color;
     text-transform: uppercase;
     margin: 36px 0 50px 0;
 
     @media screen and (min-width: 480px) {
       margin: 56px 0;
+    }
+    & a {
+      color: $primary-color;
+      text-decoration: none;
     }
   }
 }
@@ -133,7 +135,6 @@ body {
     }
   }
   &__trip {
-    // background-color: lightgray;
     position: relative;
     color: #fff;
   }
@@ -145,7 +146,6 @@ body {
     height: 100%;
     z-index: -1;
     object-fit: cover;
-    // display: none;
   }
   &__info {
     padding-left: 10px;
@@ -211,13 +211,6 @@ body {
 }
 
 //--------------------destinace.html--------------------
-
-/* .main {
-  @media screen and (min-width: 780px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
 
 .azure-moon {
   @media screen and (min-width: 780px) {
