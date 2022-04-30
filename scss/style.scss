@@ -198,3 +198,93 @@ body {
     padding: 20px 0;
   }
 }
+
+//--------------------lastminute.html--------------------
+.text-page {
+  & h1 {
+    color: $primary-color;
+    font-size: 36px;
+  }
+  &__photo {
+    width: 100%;
+  }
+}
+
+//--------------------destinace.html--------------------
+
+/* .main {
+  @media screen and (min-width: 780px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+.azure-moon {
+  @media screen and (min-width: 780px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__image {
+    & img {
+      width: 100%;
+    }
+    @media screen and (min-width: 780px) {
+      grid-column: 1/3;
+    }
+  }
+  &__info {
+    @media screen and (min-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 780px) {
+      grid-template-columns: auto;
+      grid-column: 3/4;
+    }
+  }
+  &__date,
+  &__hotel,
+  &__other {
+    background-color: $grey-destination;
+    padding: 5px 0;
+    margin: 5px 0;
+
+    @media screen and (min-width: 480px) {
+      margin: 5px;
+    }
+  }
+  &__date,
+  &__hotel,
+  &__other {
+    & p {
+      margin: 0;
+    }
+  }
+  &__price {
+    background-color: $primary-color;
+    padding: 5px 0;
+    color: $white;
+
+    @media screen and (min-width: 480px) {
+      margin: 5px;
+    }
+  }
+
+  &__price {
+    & p {
+      margin: 0;
+    }
+  }
+}
+.azure-moon-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (min-width: 480px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__photo {
+    width: 100%;
+  }
+}

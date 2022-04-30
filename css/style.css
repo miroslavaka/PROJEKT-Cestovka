@@ -212,4 +212,84 @@ body {
   background-color: #444444;
   color: #ffffff;
   padding: 20px 0;
+}
+
+.text-page h1 {
+  color: #f03000;
+  font-size: 36px;
+}
+.text-page__photo {
+  width: 100%;
+}
+
+/* .main {
+  @media screen and (min-width: 780px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+@media screen and (min-width: 780px) {
+  .azure-moon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.azure-moon__image img {
+  width: 100%;
+}
+@media screen and (min-width: 780px) {
+  .azure-moon__image {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 480px) {
+  .azure-moon__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 780px) {
+  .azure-moon__info {
+    grid-template-columns: auto;
+    grid-column: 3/4;
+  }
+}
+.azure-moon__date, .azure-moon__hotel, .azure-moon__other {
+  background-color: #e5e5e5;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+@media screen and (min-width: 480px) {
+  .azure-moon__date, .azure-moon__hotel, .azure-moon__other {
+    margin: 5px;
+  }
+}
+.azure-moon__date p, .azure-moon__hotel p, .azure-moon__other p {
+  margin: 0;
+}
+.azure-moon__price {
+  background-color: #f03000;
+  padding: 5px 0;
+  color: #ffffff;
+}
+@media screen and (min-width: 480px) {
+  .azure-moon__price {
+    margin: 5px;
+  }
+}
+.azure-moon__price p {
+  margin: 0;
+}
+
+.azure-moon-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 480px) {
+  .azure-moon-images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.azure-moon-images__photo {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
